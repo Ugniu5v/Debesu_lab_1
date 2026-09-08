@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<style>
+  input,
+  button {
+    display: block;
+    margin-bottom: 10px;
+  }
+</style>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://unpkg.com/htmx.org@2.0.4"></script>
+</head>
+<body>
+	<main>
+		<h1>ResNet50 Image Classifier</h1>
+
+		<form hx-post="/predict" hx-encoding="multipart/form-data" hx-target="#result" hx-swap="innerHTML">
+			<label for="image">Choose an image:</label><br>
+			<input id="image" name="image" type="file" accept="image/*" required><br>
+			<button type="submit">Classify</button>
+		</form>
+
+		<pre id="result" aria-live="polite">The prediction will appear here.</pre>
+	</main>
+</body>
+</html>
