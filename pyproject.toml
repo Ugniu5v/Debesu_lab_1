@@ -1,0 +1,21 @@
+[project]
+name = "debesu-lab-1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ugniu5v", email = "140313963+Ugniu5v@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.141.1",
+    "pillow>=12.3.0",
+    "torchvision>=0.29.0",
+]
+
+[project.scripts]
+debesu-lab-1 = "debesu_lab_1:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
